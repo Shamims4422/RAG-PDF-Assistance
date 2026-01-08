@@ -8,15 +8,18 @@ from get_embedding_function import get_embedding_function
 CHROMA_PATH = "chroma"
 
 PROMPT_TEMPLATE = """
-Answer the question based only on the following context:
+Answer the question based only on the following context.
 
+If the answer is NOT in the context, reply exactly with:
+"Not found in the documents."
+
+Context:
 {context}
 
 ---
 
-Answer the question based on the above context: {question}
+Question: {question}
 """
-
 
 def main():
     # Create CLI.
