@@ -9,18 +9,12 @@ Actual Response: {actual_response}
 """
 
 
-def test_monopoly_rules():
+def test_valorantrules_rules():
     assert query_and_validate(
-        question="How much total money does a player start with in Monopoly? (Answer with the number only)",
-        expected_response="$1500",
+        question="How many maps are in the competitive game?",
+        expected_response="7",
     )
 
-
-def test_ticket_to_ride_rules():
-    assert query_and_validate(
-        question="How many points does the longest continuous train get in Ticket to Ride? (Answer with the number only)",
-        expected_response="10 points",
-    )
 
 
 def query_and_validate(question: str, expected_response: str):
